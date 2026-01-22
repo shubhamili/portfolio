@@ -54,28 +54,28 @@
         }
 
         /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            top: 2rem;
-            right: 2rem;
+        /* .theme-toggle {
+            position: absolute;
+            top: 9rem;
+            right: 15rem;
             z-index: 1000;
             background: transparent;
             border: 1px solid var(--border);
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s ease;
-        }
+        } */
 
-        .theme-toggle:hover {
+        /* .theme-toggle:hover {
             transform: scale(1.1);
             background: var(--accent);
             color: var(--bg-secondary);
-        }
+        } */
 
 
 
@@ -592,9 +592,9 @@
         }
 
         @media print {
-            .theme-toggle {
+            /* .theme-toggle {
                 display: none;
-            }
+            } */
 
             body {
                 background: white;
@@ -620,7 +620,7 @@
         }
 
         .hero-text h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             letter-spacing: -0.02em;
@@ -641,7 +641,7 @@
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: var(--text-primary);
+            color: var(--text-secondary);
         }
 
         .about-section p {
@@ -664,14 +664,14 @@
         .profile-img {
             width: 180px;
             height: 180px;
-            border-radius: 50%;
+            border-radius: 5%;
             object-fit: cover;
-            border: 3px solid var(--text-primary);
+            /* border: 3px solid var(--text-primary); */
             transition: transform 0.3s ease;
         }
 
         .profile-img:hover {
-            transform: rotate(5deg) scale(1.05);
+            transform: rotate(2deg) scale(1);
         }
 
         /* Social Links */
@@ -725,7 +725,7 @@
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 760px) {
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -733,7 +733,7 @@
             }
 
             .hero-text h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .profile-img {
@@ -750,9 +750,9 @@
 </head>
 
 <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+    <!-- <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <i class="fas fa-moon" id="theme-icon"></i>
-    </button>
+    </button> -->
 
     <section class="hero">
         <div class="container">
@@ -762,16 +762,12 @@
                     <p class="age">been here for <span id="age">21.79</span> years</p>
 
                     <div class="about-section">
-                        <h2>about</h2>
-                        <p>tl;dr; backend enjoyer who reluctantly <span style="font-size: xx-small;">(अनिच्छापूर्वक
-                                हिचकते हुए)</span> touches frontend—so yeah,
+                        <h2>about </h2>
+                        <p>tl;dr; backend enjoyer who reluctantly touches frontend—so yeah,
                             full-stack i guess.</p>
-                        <p>i'm all about APIs, databases, and making servers go brr, but i can ship a decent UI when
-                            needed.</p>
+
                         <p>perpetually curious, always learning—constantly upgrading myself because standing still is
                             boring.</p>
-                        <p>basically: i build things, break things, fix things, repeat. that's the loop.</p>
-
                         </p>
                     </div>
 
@@ -789,7 +785,9 @@
                     </div>
                 </div>
 
-                <img src="/assets/im.jpg" alt="Shubham Singh" class="profile-img">
+                <!-- <img src="/assets/im.jpg" alt="Shubham Singh" class="profile-img"> -->
+                <img src="/assets/im.jpg" alt="Shubham Singh" class="profile-img" onclick="toggleTheme()"
+                    style="cursor: pointer;" title="Click to toggle theme">
             </div>
         </div>
 
@@ -810,38 +808,38 @@
                 <!-- Row 1 - Core Backend -->
                 <div class="scroll-row">
                     <div class="scroll-content">
-                        <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white"
+                        <img src="https://img.shields.io/badge/Node.js-000000?logo=nodedotjs&logoColor=339933&style=flat"
                             alt="Node.js" />
-                        <img src="https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white"
+                        <img src="https://img.shields.io/badge/Express.js-FFFFFF?logo=express&logoColor=000000&style=flat"
                             alt="Express.js" />
-                        <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"
+                        <img src="https://img.shields.io/badge/TypeScript-000000?logo=typescript&logoColor=3178C6&style=flat"
                             alt="TypeScript" />
-                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"
+                        <img src="https://img.shields.io/badge/JavaScript-FFFFFF?logo=javascript&logoColor=F7DF1E&style=flat"
                             alt="JavaScript" />
-                        <img src="https://img.shields.io/badge/Restify-FF6B35?logo=restify&logoColor=white"
+                        <img src="https://img.shields.io/badge/Restify-000000?logo=restify&logoColor=FF6B35&style=flat"
                             alt="Restify" />
-                        <img src="https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white"
+                        <img src="https://img.shields.io/badge/Socket.IO-FFFFFF?logo=socketdotio&logoColor=010101&style=flat"
                             alt="Socket.IO" />
-                        <img src="https://img.shields.io/badge/WebSocket-000000?logo=websocket&logoColor=white"
+                        <img src="https://img.shields.io/badge/WebSocket-000000?logo=websocket&logoColor=FFFFFF&style=flat"
                             alt="WebSocket" />
-                        <img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white"
+                        <img src="https://img.shields.io/badge/Prisma-FFFFFF?logo=prisma&logoColor=2D3748&style=flat"
                             alt="Prisma" />
                         <!-- Duplicate for infinite scroll -->
-                        <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white"
+                        <img src="https://img.shields.io/badge/Node.js-000000?logo=nodedotjs&logoColor=339933&style=flat"
                             alt="Node.js" />
-                        <img src="https://img.shields.io/badge/Express.js-000000?logo=express&logoColor=white"
+                        <img src="https://img.shields.io/badge/Express.js-FFFFFF?logo=express&logoColor=000000&style=flat"
                             alt="Express.js" />
-                        <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"
+                        <img src="https://img.shields.io/badge/TypeScript-000000?logo=typescript&logoColor=3178C6&style=flat"
                             alt="TypeScript" />
-                        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black"
+                        <img src="https://img.shields.io/badge/JavaScript-FFFFFF?logo=javascript&logoColor=F7DF1E&style=flat"
                             alt="JavaScript" />
-                        <img src="https://img.shields.io/badge/Restify-FF6B35?logo=restify&logoColor=white"
+                        <img src="https://img.shields.io/badge/Restify-000000?logo=restify&logoColor=FF6B35&style=flat"
                             alt="Restify" />
-                        <img src="https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white"
+                        <img src="https://img.shields.io/badge/Socket.IO-FFFFFF?logo=socketdotio&logoColor=010101&style=flat"
                             alt="Socket.IO" />
-                        <img src="https://img.shields.io/badge/WebSocket-000000?logo=websocket&logoColor=white"
+                        <img src="https://img.shields.io/badge/WebSocket-000000?logo=websocket&logoColor=FFFFFF&style=flat"
                             alt="WebSocket" />
-                        <img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white"
+                        <img src="https://img.shields.io/badge/Prisma-FFFFFF?logo=prisma&logoColor=2D3748&style=flat"
                             alt="Prisma" />
                     </div>
                 </div>
@@ -849,34 +847,38 @@
                 <!-- Row 2 - Databases & DevOps -->
                 <div class="scroll-row">
                     <div class="scroll-content">
-                        <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white"
+                        <img src="https://img.shields.io/badge/MongoDB-000000?logo=mongodb&logoColor=47A248&style=flat"
                             alt="MongoDB" />
-                        <img src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white"
+                        <img src="https://img.shields.io/badge/PostgreSQL-FFFFFF?logo=postgresql&logoColor=336791&style=flat"
                             alt="PostgreSQL" />
-                        <img src="https://img.shields.io/badge/Mongoose-880000?logo=mongoose&logoColor=white"
+                        <img src="https://img.shields.io/badge/Mongoose-000000?logo=mongoose&logoColor=880000&style=flat"
                             alt="Mongoose" />
-                        <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white"
+                        <img src="https://img.shields.io/badge/Docker-FFFFFF?logo=docker&logoColor=2496ED&style=flat"
                             alt="Docker" />
-                        <img src="https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white" alt="Redis" />
-                        <img src="https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black"
+                        <img src="https://img.shields.io/badge/Redis-000000?logo=redis&logoColor=DC382D&style=flat"
+                            alt="Redis" />
+                        <img src="https://img.shields.io/badge/Firebase-FFFFFF?logo=firebase&logoColor=FFCA28&style=flat"
                             alt="Firebase" />
-                        <img src="https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL" />
-                        <img src="https://img.shields.io/badge/Node--Cache-339933?logo=node.js&logoColor=white"
+                        <img src="https://img.shields.io/badge/SQL-000000?logo=postgresql&logoColor=4479A1&style=flat"
+                            alt="SQL" />
+                        <img src="https://img.shields.io/badge/Node--Cache-FFFFFF?logo=node.js&logoColor=339933&style=flat"
                             alt="Node Cache" />
                         <!-- Duplicate for infinite scroll -->
-                        <img src="https://img.shields.io/badge/MongoDB-47A248?logo=mongodb&logoColor=white"
+                        <img src="https://img.shields.io/badge/MongoDB-000000?logo=mongodb&logoColor=47A248&style=flat"
                             alt="MongoDB" />
-                        <img src="https://img.shields.io/badge/PostgreSQL-336791?logo=postgresql&logoColor=white"
+                        <img src="https://img.shields.io/badge/PostgreSQL-FFFFFF?logo=postgresql&logoColor=336791&style=flat"
                             alt="PostgreSQL" />
-                        <img src="https://img.shields.io/badge/Mongoose-880000?logo=mongoose&logoColor=white"
+                        <img src="https://img.shields.io/badge/Mongoose-000000?logo=mongoose&logoColor=880000&style=flat"
                             alt="Mongoose" />
-                        <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white"
+                        <img src="https://img.shields.io/badge/Docker-FFFFFF?logo=docker&logoColor=2496ED&style=flat"
                             alt="Docker" />
-                        <img src="https://img.shields.io/badge/Redis-DC382D?logo=redis&logoColor=white" alt="Redis" />
-                        <img src="https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black"
+                        <img src="https://img.shields.io/badge/Redis-000000?logo=redis&logoColor=DC382D&style=flat"
+                            alt="Redis" />
+                        <img src="https://img.shields.io/badge/Firebase-FFFFFF?logo=firebase&logoColor=FFCA28&style=flat"
                             alt="Firebase" />
-                        <img src="https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white" alt="SQL" />
-                        <img src="https://img.shields.io/badge/Node--Cache-339933?logo=node.js&logoColor=white"
+                        <img src="https://img.shields.io/badge/SQL-000000?logo=postgresql&logoColor=4479A1&style=flat"
+                            alt="SQL" />
+                        <img src="https://img.shields.io/badge/Node--Cache-FFFFFF?logo=node.js&logoColor=339933&style=flat"
                             alt="Node Cache" />
                     </div>
                 </div>
@@ -884,45 +886,55 @@
                 <!-- Row 3 - Frontend & Tools -->
                 <div class="scroll-row">
                     <div class="scroll-content">
-                        <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black" alt="React" />
-                        <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5" />
-                        <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3" />
-                        <img src="https://img.shields.io/badge/shadcn/ui-000000?style=flat&logo=react&logoColor=white"
+                        <img src="https://img.shields.io/badge/React-000000?logo=react&logoColor=61DAFB&style=flat"
+                            alt="React" />
+                        <img src="https://img.shields.io/badge/HTML5-FFFFFF?logo=html5&logoColor=E34F26&style=flat"
+                            alt="HTML5" />
+                        <img src="https://img.shields.io/badge/CSS3-000000?logo=css3&logoColor=1572B6&style=flat"
+                            alt="CSS3" />
+                        <img src="https://img.shields.io/badge/shadcn/ui-FFFFFF?style=flat&logo=react&logoColor=61DAFB"
                             alt="shadcn/ui" />
-                        <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" alt="Git" />
-                        <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white"
+                        <img src="https://img.shields.io/badge/Git-000000?logo=git&logoColor=F05032&style=flat"
+                            alt="Git" />
+                        <img src="https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=181717&style=flat"
                             alt="GitHub" />
-                        <img src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white"
+                        <img src="https://img.shields.io/badge/Postman-000000?logo=postman&logoColor=FF6C37&style=flat"
                             alt="Postman" />
-                        <img src="https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=black"
+                        <img src="https://img.shields.io/badge/Swagger-FFFFFF?logo=swagger&logoColor=85EA2D&style=flat"
                             alt="Swagger" />
-                        <img src="https://img.shields.io/badge/Google%20OAuth-4285F4?logo=google&logoColor=white"
+                        <img src="https://img.shields.io/badge/Google%20OAuth-000000?logo=google&logoColor=4285F4&style=flat"
                             alt="Google OAuth" />
-                        <img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white"
+                        <img src="https://img.shields.io/badge/Vercel-FFFFFF?logo=vercel&logoColor=000000&style=flat"
                             alt="Vercel" />
-                        <img src="https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white"
+                        <img src="https://img.shields.io/badge/Netlify-000000?logo=netlify&logoColor=00C7B7&style=flat"
                             alt="Netlify" />
-                        <img src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white" alt="npm" />
+                        <img src="https://img.shields.io/badge/npm-FFFFFF?logo=npm&logoColor=CB3837&style=flat"
+                            alt="npm" />
                         <!-- Duplicate for infinite scroll -->
-                        <img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black" alt="React" />
-                        <img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5" />
-                        <img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3" />
-                        <img src="https://img.shields.io/badge/shadcn/ui-000000?style=flat&logo=react&logoColor=white"
+                        <img src="https://img.shields.io/badge/React-000000?logo=react&logoColor=61DAFB&style=flat"
+                            alt="React" />
+                        <img src="https://img.shields.io/badge/HTML5-FFFFFF?logo=html5&logoColor=E34F26&style=flat"
+                            alt="HTML5" />
+                        <img src="https://img.shields.io/badge/CSS3-000000?logo=css3&logoColor=1572B6&style=flat"
+                            alt="CSS3" />
+                        <img src="https://img.shields.io/badge/shadcn/ui-FFFFFF?style=flat&logo=react&logoColor=61DAFB"
                             alt="shadcn/ui" />
-                        <img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white" alt="Git" />
-                        <img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white"
+                        <img src="https://img.shields.io/badge/Git-000000?logo=git&logoColor=F05032&style=flat"
+                            alt="Git" />
+                        <img src="https://img.shields.io/badge/GitHub-FFFFFF?logo=github&logoColor=181717&style=flat"
                             alt="GitHub" />
-                        <img src="https://img.shields.io/badge/Postman-FF6C37?logo=postman&logoColor=white"
+                        <img src="https://img.shields.io/badge/Postman-000000?logo=postman&logoColor=FF6C37&style=flat"
                             alt="Postman" />
-                        <img src="https://img.shields.io/badge/Swagger-85EA2D?logo=swagger&logoColor=black"
+                        <img src="https://img.shields.io/badge/Swagger-FFFFFF?logo=swagger&logoColor=85EA2D&style=flat"
                             alt="Swagger" />
-                        <img src="https://img.shields.io/badge/Google%20OAuth-4285F4?logo=google&logoColor=white"
+                        <img src="https://img.shields.io/badge/Google%20OAuth-000000?logo=google&logoColor=4285F4&style=flat"
                             alt="Google OAuth" />
-                        <img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white"
+                        <img src="https://img.shields.io/badge/Vercel-FFFFFF?logo=vercel&logoColor=000000&style=flat"
                             alt="Vercel" />
-                        <img src="https://img.shields.io/badge/Netlify-00C7B7?logo=netlify&logoColor=white"
+                        <img src="https://img.shields.io/badge/Netlify-000000?logo=netlify&logoColor=00C7B7&style=flat"
                             alt="Netlify" />
-                        <img src="https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=white" alt="npm" />
+                        <img src="https://img.shields.io/badge/npm-FFFFFF?logo=npm&logoColor=CB3837&style=flat"
+                            alt="npm" />
                     </div>
                 </div>
             </div>
@@ -1256,8 +1268,8 @@
                     <a href="mailto:shubhamsinghia160@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="tel:+919559361406"><i class="fas fa-phone"></i></a>
                 </div>
-                <p class="footer-text">© 2025 Shubham Singh. Built with passion for backend development.</p>
-                <p class="footer-text">📍 Surat, Gujarat, India</p>
+                <p class="footer-text">© 2026 Shubham Singh.</p>
+                <p class="footer-text"><i class="fas fa-map-marker-alt" style="font-size: 0.8em;"></i> India</p>
             </div>
         </div>
     </footer>
@@ -1265,29 +1277,23 @@
     <script>
         function toggleTheme() {
             const html = document.documentElement;
-            const icon = document.getElementById('theme-icon');
             const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-            if (currentTheme === 'dark') {
-                html.removeAttribute('data-theme');
-                icon.className = 'fas fa-moon';
-                localStorage.setItem('theme', 'light');
-            } else {
-                html.setAttribute('data-theme', 'dark');
-                icon.className = 'fas fa-sun';
-                localStorage.setItem('theme', 'dark');
-            }
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+
+            // Optional: Add a subtle animation to the image when clicked
+            const img = document.querySelector('.profile-img');
+            setTimeout(() => {
+                img.style.transform = '';
+            }, 300);
         }
 
-        // Load saved theme
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedTheme = localStorage.getItem('theme');
-            const icon = document.getElementById('theme-icon');
-
-            if (savedTheme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                icon.className = 'fas fa-sun';
-            }
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
         });
 
 
