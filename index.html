@@ -323,7 +323,6 @@
             background: var(--bg-primary);
             border-radius: 16px;
             overflow: hidden;
-            /* border: 1px solid var(--border); */
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -331,12 +330,8 @@
 
         .project-card:hover {
             transform: translateY(-4px);
-            /* box-shadow: 0 8px 24px var(--shadow);
-            border-color: var(--accent); */
         }
 
-        /* project  */
-        /* Image container for better aspect ratio control */
         .project-card img {
             width: 100%;
             height: 240px;
@@ -447,6 +442,50 @@
             font-size: 1.1rem;
         }
 
+        /* Hidden projects initially */
+        .project-card.hidden {
+            display: none;
+        }
+
+        /* View More Button */
+        .view-more-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .view-more-btn {
+            background: transparent;
+            color: var(--text-primary);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 14px;
+            /* font-weight: 600; */
+            /* border-radius: 8px; */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .view-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+
+        }
+
+        .view-more-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .view-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+
+        .view-more-btn.hidden {
+            display: none;
+        }
+
         /* Responsive Design */
         @media (min-width: 768px) {
             .projects-grid {
@@ -470,6 +509,10 @@
             .project-links {
                 flex-direction: column;
                 gap: 0.75rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
 
@@ -989,8 +1032,9 @@
                         </div>
                         <p class="project-desc">
                             Production-ready social media platform with real-time interactions and AI-powered content
-                            creation.
-                            Features secure JWT & Google OAuth authentication, Socket.io notifications with Redis queue,
+                            creation. Features secure JWT & Google OAuth authentication, Socket.io notifications with
+                            Redis
+                            queue,
                             Groq AI caption generation, and Cloudinary media CDN. Fully Dockerized for seamless
                             deployment.
                         </p>
@@ -1026,10 +1070,10 @@
                         </div>
                         <p class="project-desc">
                             Enterprise-grade BookMyShow clone solving complex concurrency challenges. Implements
-                            race-condition-safe
-                            bookings with temporary seat locking and TTL expiry. Features normalized relational schema,
-                            complete
-                            booking state machine (PENDING → BOOKED/CANCELLED/EXPIRED), and dynamic pricing engine.
+                            race-condition-safe bookings with temporary seat locking and TTL expiry. Features normalized
+                            relational schema,
+                            complete booking state machine (PENDING → BOOKED/CANCELLED/EXPIRED), and dynamic pricing
+                            engine.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">TypeScript</span>
@@ -1047,8 +1091,10 @@
                     </div>
                 </div>
 
+                <!-- Hidden Projects (Initially Hidden) -->
+
                 <!-- Project 3: Resume CLI -->
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&h=400&fit=crop"
                         alt="Resume CLI Package" class="project-img">
                     <div class="project-content">
@@ -1079,7 +1125,7 @@
                 </div>
 
                 <!-- Project 4: Food Cart -->
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=400&fit=crop"
                         alt="Food Cart Management" class="project-img">
                     <div class="project-content">
@@ -1107,9 +1153,8 @@
                     </div>
                 </div>
 
-
                 <!-- Project 5: Accounting System -->
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=400&fit=crop"
                         alt="Enterprise Accounting System" class="project-img">
                     <div class="project-content">
@@ -1123,7 +1168,8 @@
                             backend using Restify with message queue-based async processing for financial operations.
                             Implemented
                             worker-based transaction processing with job queues for reliable ledger updates,
-                            reconciliation, and
+                            reconciliation,
+                            and
                             audit trail generation.
                         </p>
                         <div class="project-tech">
@@ -1142,9 +1188,8 @@
                     </div>
                 </div>
 
-
                 <!-- Project 6: Form Builder -->
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&h=400&fit=crop"
                         alt="Dynamic Form Builder" class="project-img">
                     <div class="project-content">
@@ -1177,15 +1222,14 @@
                 </div>
 
                 <!-- Project 7: Excalidraw Board -->
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="/assets/notes.png" alt="Excalidraw Board" class="project-img">
                     <div class="project-content">
                         <div class="project-header">
                             <h3 class="project-title">Excalidraw Notes Board</h3>
                         </div>
                         <p class="project-desc">
-                            Minimal, dark-themed Next.js board application for quick note-taking.
-                            Features
+                            Minimal, dark-themed Next.js board application for quick note-taking. Features
                             automatic saving with localStorage persistence, JSON import/export functionality, and
                             fullscreen
                             editor mode. Built with modern React patterns and optimized for performance.
@@ -1207,10 +1251,8 @@
                     </div>
                 </div>
 
-
-
                 <!-- Project 8: E-commerce Platform -->
-                <div class="project-card">
+                <div class="project-card hidden">
                     <img src="/assets/ecommerce.png" alt="E-commerce Platform" class="project-img">
                     <div class="project-content">
                         <div class="project-header">
@@ -1241,8 +1283,17 @@
                 </div>
 
             </div>
+
+            <!-- View More Button -->
+            <div class="view-more-container">
+                <button class="view-more-btn" id="viewMoreBtn">
+                    <span id="btnText">View More Projects</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
         </div>
     </section>
+
     <section class="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
@@ -1275,6 +1326,37 @@
     </footer>
 
     <script>
+
+
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const btnText = document.getElementById('btnText');
+        const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+        let isExpanded = false;
+
+        viewMoreBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+
+            hiddenProjects.forEach(project => {
+                if (isExpanded) {
+                    project.classList.remove('hidden');
+                } else {
+                    project.classList.add('hidden');
+                }
+            });
+
+            if (isExpanded) {
+                btnText.textContent = 'Show Less';
+                viewMoreBtn.classList.add('expanded');
+            } else {
+                btnText.textContent = 'View More Projects';
+                viewMoreBtn.classList.remove('expanded');
+                // Scroll back to projects section
+                document.querySelector('.projects').scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+
+
         function toggleTheme() {
             const html = document.documentElement;
             const currentTheme = html.getAttribute('data-theme');
